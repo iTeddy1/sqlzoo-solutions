@@ -12,9 +12,7 @@ I've compiled the solutions to all of all 10 levels on the [SQLZOO Tutoral](http
 8. [Using NULL](#using-null)
 9. [Self JOIN](#self-join)
 
-## SELECT basics
-Some simple queries to get you started
-
+## 1. [SELECT basics](https://sqlzoo.net/wiki/SELECT_basics)
 1.
 ```sql
 SELECT population FROM world
@@ -32,7 +30,7 @@ SELECT name, area FROM world
   WHERE area BETWEEN 200000 AND 250000
 
 ```
-## SELECT from WORLD
+## 2. [SELECT from WORLD](https://sqlzoo.net/wiki/Self_join)
 1.
 ```sql
 SELECT name, continent, population FROM world
@@ -103,7 +101,7 @@ SELECT name FROM world
   AND name NOT LIKE '% %'
 ```
 
-## SELECT from NOBEL
+## 3. [SELECT from NOBEL](https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial)
 1.
 ```sql
 SELECT yr, subject, winner FROM nobel
@@ -186,7 +184,7 @@ SELECT winner, subject
  WHERE yr = 1984
  ORDER BY subject in ('Chemistry','Physics'), subject, winner
 ```
-## SELECT in SELECT
+## 4. [SELECT in SELECT](https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial)
 1.
 ```sql
 SELECT name FROM world
@@ -257,7 +255,7 @@ SELECT name, continent FROM world x
                            WHERE x.continent = y.continent
                             and y.name <> x.name)
 ```
-## SUM and COUNT
+## 5. [SUM and COUNT](https://sqlzoo.net/wiki/SUM_and_COUNT)
 1.
 ```sql
 SELECT SUM(population)
@@ -299,7 +297,7 @@ SELECT continent FROM world
   GROUP BY continent
     HAVING SUM(population) >= 100000000  
 ```
-## JOIN
+## 6. [JOIN](https://sqlzoo.net/wiki/The_JOIN_operation)
 1.
 ```sql
 SELECT matchid, player FROM goal
@@ -385,7 +383,7 @@ SELECT DISTINCT mdate,
     GROUP BY mdate, id
       ORDER BY mdate, matchid, team1, team2
 ```
-## More JOIN
+## 7. [More JOIN](https://sqlzoo.net/wiki/More_JOIN_operations)
 1.
 ```sql
 SELECT id, title
@@ -505,7 +503,7 @@ SELECT DISTINCT name
         FROM casting JOIN actor ON (actorid = actor.id)
   		    WHERE actor.name = 'Art Garfunkel')
 ```
-## Using NULL
+## 8. [Using NULL](https://sqlzoo.net/wiki/Using_Null)
 1.
 ```sql
 SELECT name FROM teacher
@@ -563,7 +561,7 @@ SELECT name, CASE WHEN dept IN (1,2) THEN 'Sci'
              END
   FROM teacher
 ```
-## Self JOIN
+## 9. [Self JOIN](https://sqlzoo.net/wiki/Self_join)
 1.
 ```sql
 SELECT COUNT(id) FROM stops
