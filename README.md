@@ -1,5 +1,5 @@
-# SQLZOO Solutions
-I've compiled the solutions to all of all 10 levels on the [SQLZOO Tutoral](http://sqlzoo.net/wiki/SQL_Tutorial).  
+# SQLZOO Solutions 2023
+I've compiled the solutions to the [SQLZOO Tutoral](http://sqlzoo.net/wiki/SQL_Tutorial) version.  
 
 ## Sections:
 1. [SELECT basics](#select-basics)
